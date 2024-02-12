@@ -1,0 +1,7 @@
+Proyecto fullstack, UCompensar Desarrollo de software web Front-End/ 239-5b noche - Llerman Salazar
+
+AirFly sera un sistema web para una aerolinea,
+donde tendra su vista para usuario y su vista para
+administradores, permitira realizar compras y reservas
+de tiquetes y paquetes de viaje entre otros servicios
+que ofrece la aerolinea
