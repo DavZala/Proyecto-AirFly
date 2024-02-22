@@ -1,0 +1,211 @@
+.container-fluid{
+    background-color: white;
+}
+.nav-search{
+    margin-right: 100px;
+    margin-left: 400px;
+    width: 100%;
+}
+.seccion-1{
+    height: 680px;
+    position: relative;
+}
+.tarjeta-1{
+    width: 82%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../../assets/img/Avion-seccion-1-page.jpg);
+    filter: brightness(90%)
+}
+.tarjeta-secc-1-1{
+    width: 50%;
+    top: 18%;
+    left: 10%;
+    height: 70%;
+    position: absolute;
+}
+.tarjeta-secc-1-2{
+    border-radius: 10px;
+    width: 32%;
+    height: 70%;
+    top: 18%;
+    left: 78%;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
+.text-info{
+   margin: 12%;
+}
+.text-info h4{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+.informacion-areopuertos .p1{
+    color: red;
+    font-size: medium;
+    font-weight: 200;
+}
+.text-info p{
+    color: black;
+    font-size: small;
+    opacity: 0.4;
+}
+
+.seccion-2{
+    height: 850px;
+    position: relative;
+}
+.tarjeta-2{
+    top: 5%;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: absolute;
+}
+.tarjeta-secc-2-part-1{
+    width: 80%;
+    height: 115%;
+
+}
+.tarjeta-secc-2-part-2{
+    position: relative;
+    width: 80%;
+    height: 90%
+}
+.tarjeta-secc-2-part-2 > div{
+    top: 11%;
+    left: 5%;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.tarjeta-secc-2-part-2 h4{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+.text-offert{
+    margin: 5%;
+    height: 80%;
+}
+.text-offert h4{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+.card-body{
+    text-align: center;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-informativo{
+    left: 5%;
+    width: 100%;
+    height: 30%;
+}
+.text-informativo h3{
+    color: white    ;
+    font-weight: 500;
+    font-size: x-large;
+}
+.text-informativo P{
+    color: white    ;
+    font-size: medium;
+}
+.lista-informativa{
+    width: 100%;
+    height: 70%;  
+}
+.lista-informativa h4{
+    top: 33%;
+    left: 5%;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+}
+.lista-informativa p{
+    top: 40%;
+    left: 5%;
+    position: absolute;
+    color: white;
+    font-weight: 100;
+    font-size: medium;
+}
+.lista-1{
+    height: 32%;
+    border-radius: 15px;
+    border: solid 2px;
+    margin-bottom: 2%;
+}
+.lista-2{
+    height: 32%;
+    border-radius: 15px;
+    border: solid 2px;
+    margin-bottom: 2%;
+    background-color: (255,255,255, 0.0);
+}
+.lista-2 h4{
+    top: 58%;
+}
+.lista-2 p{
+    top: 65%;
+    opacity: 0.9;
+}
+.translucido{
+    background-color: (255,255,255);
+}
+.lista-3{
+    height: 32%;
+    border-radius: 15px;
+    border: solid 2px;
+    opacity: 0.9;
+    margin-bottom: 2%;
+   /* background-color: violet;*/
+}
+.lista-3 h4{
+    top: 82%
+}
+.lista-3 p{
+    top: 89%;
+}
+.selec-aeropuerto{
+    height: 100%;
+    background-color: black;
+}
+.buttom-search{
+    height: 20%;
+}
+footer{
+    height: 350px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: hue-rotate(180deg);
+    background-image: url(../../assets/img/image.png);
+}
+.informacion-footer{
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    left: 12%;
+    top: 18%;
+}
+.informacion-footer h4{
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+}
+.informacion-footer {
+    color: white;
+    font-weight: 100;
+    font-size: medium;
+}

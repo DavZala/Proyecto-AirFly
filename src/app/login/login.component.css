@@ -1,0 +1,23 @@
+.contenedor{
+    text-align: center;
+    margin: 300px;
+    margin-top: 70px;
+    margin-bottom: 150px;
+
+}
+.contenedor img{
+    width: 450px;
+}
+.contenedor.h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btns-login{
+    width: 100%;
+    margin-top: 55px;
+    margin-bottom: 155px;
+    text-align: center;
+}
+.btns-login button{
+    width: 58%;
+    height: 50px;
+}
