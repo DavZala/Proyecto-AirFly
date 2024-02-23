@@ -42,51 +42,53 @@
   <body>
     <div class="seccion-1">
       <div class="tarjeta-1">
-        <div class="tarjeta-secc-1-1">
-          <div class="text-informativo">
-            <h3>Mas Que Solo Un Viaje!</h3>
-            <p>En AirFly estamos comprometidos a mejorar nuestra calidad <br>dia por dia para un mejor servicio.</p>
-          </div>
-          <div class="lista-informativa">
-            <div class="lista-1">
-                <h4>+7 Millones</h4>
-                <p>Mas de 5 millones de pasajeros transportado en 2023</p>
+        <div class="bg-blue">
+          <div class="tarjeta-secc-1-1">
+            <div class="text-informativo">
+              <h3>Mas Que Solo Un Viaje!</h3>
+              <p>En AirFly estamos comprometidos a mejorar nuestra calidad <br>dia por dia para un mejor servicio.</p>
             </div>
-            <div class="lista-2">
-              <div class="translucido">
-                <h4>+44 Destinos</h4>
-                <p>Cuatro continentes, con 44 rutas internacionales y 35 locales</p>
+            <div class="lista-informativa">
+              <div class="lista-1">
+                  <h4>+7 Millones</h4>
+                  <p>Mas de 5 millones de pasajeros transportado en 2023</p>
+              </div>
+              <div class="lista-2">
+                <div class="translucido">
+                  <h4>+44 Destinos</h4>
+                  <p>Cuatro continentes, con 44 rutas internacionales y 35 locales</p>
+                </div>
+              </div>
+              <div class="lista-3">
+                <h4>+56 Unidades</h4>
+                <p>Contamos con mas de 56 rutas aereas con todas las estandarizacion intertacionales y comodidad</p>
               </div>
             </div>
-            <div class="lista-3">
-              <h4>+56 Unidades</h4>
-             <p>Contamos con mas de 56 rutas aereas con todas las estandarizacion intertacionales y comodidad</p>
-            </div>
           </div>
-        </div>
-        <div class="tarjeta-secc-1-2">
-          <div class="text-info">
-            <div class="informacion-areopuertos">
-                <p class="p1">Aeropuerto de Salida</p>
-                <h4>Bogotá(BGT)</h4>
-                <p>Aeropuerto el Dorado</p>
-            </div>
-            <div class="selec-aeropuerto">
-              <img src="../../assets/img/person.svg" alt="">
-              <select class="form-select form-select-sm" aria-label="Small select example">
-                <option selected>Pasajeros</option>
-                <option value="1">Uno</option>
-                <option value="2">Dos</option>
-                <option value="3">Mas de Tres</option>
-              </select>
-              <div class="buttom-search">
-                <button type="button" class="btn btn-primary">Buscar Ticket</button>
+          <div class="tarjeta-secc-1-2">
+            <div class="text-info">
+              <div class="informacion-areopuertos">
+                  <p class="p1 ">Aeropuerto de Salida</p>
+                  <h4>Bogotá(BGT)</h4>
+                  <p>Aeropuerto el Dorado</p>
               </div>
+              <div class="selec-aeropuerto">
+                <img src="../../assets/img/person.svg" alt="">
+                <select class="form-select form-select-sm" aria-label="Small select example">
+                  <option selected>Pasajeros</option>
+                  <option value="1">Uno</option>
+                  <option value="2">Dos</option>
+                  <option value="3">Mas de Tres</option>
+                </select>
+                <div class="buttom-search">
+                  <button type="button" class="btn btn-primary">Buscar Ticket</button>
+                </div>
+              </div>
+
             </div>
+            <div class="text-interact">
 
-          </div>
-          <div class="text-interact">
-
+            </div>
           </div>
         </div>
       </div>
@@ -97,10 +99,10 @@
           <div class="text-offert">
             <h4>Oferta Espepcial!</h4>
             <div class="card" style="width: 100%; height: 90%;">
-              <img src="../../assets/img/omrah.jpg" class="card-img-top" alt="...">
+              <img src="../../assets/img/disney.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
-                <p class="card-text">Arabia Saudita</p>
-                <h4 class="card-text">Omrah</h4>
+                <p class="card-text">{{PaisDestino}}</p>
+                <h4 class="card-text">{{Destino}}</h4>
                 <p class="card-text">Vuelo en clase economica - regreso el 26 Junio 2024<br>desde 1200USD</p>
               </div>
             </div>
@@ -156,7 +158,9 @@
       </div>
     </div>
   </body> 
-  <footer>
+  <app-footer></app-footer>
+  
+ <!-- <footer>
     <div class="informacion-footer">
         <h4>Nunca pierdas una oferta!</h4>
         <p>Subscribete para recibir antes que nadie sobre nuestra promociones</p>
@@ -167,4 +171,5 @@
         </div>
         <button type="button" class="btn btn-outline-info">Enviar</button>
     </div>
-  </footer>  
+  </footer> 
+-->

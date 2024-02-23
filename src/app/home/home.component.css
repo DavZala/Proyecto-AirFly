@@ -17,6 +17,16 @@
     background-image: url(../../assets/img/Avion-seccion-1-page.jpg);
     filter: brightness(90%)
 }
+
+/*Esta clase toma el tamaño tamaño del div de tarjeta1 y le coloca
+    un fondo de color con opacidad que sirve para colocar el "filtro"
+    que tiene la imagen en el background-color toca usar rgb(codigo del color)
+    por que no estaba reconociendolo haci no más.  Agreger el div que tiene esta clase*/
+.bg-blue, footer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 35, 66,0.4);
+}
 .tarjeta-secc-1-1{
     width: 50%;
     top: 18%;
@@ -103,6 +113,7 @@
 .card-body{
     text-align: center;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .text-informativo{
@@ -142,15 +153,19 @@
 .lista-1{
     height: 32%;
     border-radius: 15px;
-    border: solid 2px;
+    /*border: solid 2px;*/
+    background-color: rgba(110, 163, 253, 0.4);
     margin-bottom: 2%;
+   /* background-color: rgb(255,255,255, 0.3);*/
 }
 .lista-2{
     height: 32%;
     border-radius: 15px;
-    border: solid 2px;
+    /*border: solid 2px;*/
     margin-bottom: 2%;
-    background-color: (255,255,255, 0.0);
+    background-color: rgba(110, 163, 253, 0.4);
+    /*Tiene otro color diferente*/
+    /*background-color: rgba(188, 198, 248, 0.5);*/
 }
 .lista-2 h4{
     top: 58%;
@@ -165,9 +180,11 @@
 .lista-3{
     height: 32%;
     border-radius: 15px;
-    border: solid 2px;
+    /*border: solid 2px;*/
     opacity: 0.9;
     margin-bottom: 2%;
+    /*Este es con el color azul*/
+    background-color: rgba(110, 163, 253, 0.4);
    /* background-color: violet;*/
 }
 .lista-3 h4{
@@ -182,30 +199,4 @@
 }
 .buttom-search{
     height: 20%;
-}
-footer{
-    height: 350px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: hue-rotate(180deg);
-    background-image: url(../../assets/img/image.png);
-}
-.informacion-footer{
-    position: absolute;
-    width: 40%;
-    height: 75%;
-    left: 12%;
-    top: 18%;
-}
-.informacion-footer h4{
-    color: white;
-    font-weight: 500;
-    font-size: x-large;
-}
-.informacion-footer {
-    color: white;
-    font-weight: 100;
-    font-size: medium;
 }

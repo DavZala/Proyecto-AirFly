@@ -1,0 +1,26 @@
+footer{
+  height: 350px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(110, 163, 253, 0.4);
+  background-image: url(../../assets/img/image.png);
+}
+.informacion-footer{
+  position: absolute;
+  width: 40%;
+  height: 75%;
+  left: 12%;
+  top: 18%;
+}
+.informacion-footer h4{
+  color: white;
+  font-weight: 500;
+  font-size: x-large;
+}
+.informacion-footer {
+  color: white;
+  font-weight: 100;
+  font-size: medium;
+}

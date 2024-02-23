@@ -1,0 +1,62 @@
+.seccion-1{
+    height: 600px;
+    background-color: red;
+}
+.seccion-2{
+    height: 680px;
+}
+.seccion-3{
+    height: 800px;
+    background-color: orange;
+}
+
+.imgs{
+    width: 80%;
+    height: 80%;
+    background-color: black;
+}
+/*
+.imgs{
+    width: 100%;
+    display: grid;
+    border: solid, black, 3px ;
+    grid-template-areas: "1 2 2"
+                         "1 3 4";
+    grid-gap: 10px;
+}
+.imgs .imgs-1{
+    height: 100%;
+    background-color: yellow;
+}
+.imgs .imgs-2{
+    background-color: green;
+}
+.imgs .imgs-3{
+    background-color: blue;
+}
+.imgs .imgs-4{
+    background-color: olive;
+}
+*/
+.seccion-2{
+    position: relative;
+}
+
+.tarjeta-1-sec-2{
+    top: 5%;
+    left: 5%;
+    background-color: violet;
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+
+.info-img{
+    display: flex;
+}
+
+.info-img img{
+    margin-right: 25%;
+    margin-top: 12%;
+    width: 18%;
+}

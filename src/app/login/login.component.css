@@ -1,23 +1,25 @@
-.contenedor{
+.container{
     text-align: center;
-    margin: 300px;
-    margin-top: 70px;
-    margin-bottom: 150px;
-
+    height: 700px;
 }
-.contenedor img{
-    width: 450px;
+.container img{
+    width: 30%;
 }
-.contenedor.h2{
+.container.h2{
     font-family: Arial, Helvetica, sans-serif;
+}
+.text{
+    width: 45%;
+    position: relative;
+    left: 28%;
 }
 .btns-login{
     width: 100%;
-    margin-top: 55px;
-    margin-bottom: 155px;
+    margin-top: 8%;
     text-align: center;
 }
 .btns-login button{
-    width: 58%;
+    background-repeat: no-repeat;
+    width: 45%;
     height: 50px;
 }
