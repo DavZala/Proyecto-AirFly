@@ -45,7 +45,7 @@
 .tarjeta-1-sec-2{
     top: 5%;
     left: 5%;
-    background-color: violet;
+    /*background-color: violet;¨*/
     width: 90%;
     height: 90%;
     position: relative;
@@ -54,9 +54,24 @@
 .info-img{
     display: flex;
 }
+.tarjeta-1-sec-2 h4{
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}   
+.text{
+    top: 8%;
+    line-height: 25px;
+    position: relative;
+    font-size: large;
+    width: 70%;
+    left: 8%;
+   /* background-color: royalblue;*/
+}
 
 .info-img img{
-    margin-right: 25%;
-    margin-top: 12%;
-    width: 18%;
+    margin-left: 10%;
+    margin-right: 8%;
+    margin-top: 8%;
+    width: 16%;
 }
