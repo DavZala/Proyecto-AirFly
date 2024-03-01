@@ -1,0 +1,23 @@
+.contenedor{
+    width: 100%;
+    height: 650px;
+    display: flex;
+}
+.menu-cont{
+    width: 15%;
+    height: 100%;
+}
+.container{
+    top: 12%;
+    left: 10%;
+    position: relative;   
+}
+.panel1{
+    width: 100%;
+}
+.panel2{
+    width: 100%;
+}
+.panel3{
+    width: 100%;
+}

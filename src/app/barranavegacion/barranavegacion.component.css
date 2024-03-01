@@ -1,0 +1,8 @@
+.container-fluid{
+    background-color: white;
+}
+.nav-search{
+    margin-right: 100px;
+    margin-left: 400px;
+    width: 100%;
+}

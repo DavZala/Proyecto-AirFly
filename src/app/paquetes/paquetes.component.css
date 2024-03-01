@@ -1,0 +1,32 @@
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0;
+    display: flex;
+    background-color: black;
+}
+.sidebar{
+    background-color: blue;
+    width: 20%;
+}
+.seccion{
+    width: 80%;
+    background-color: orange;
+}
+.seccion li{
+    /*background-color: chartreuse;*/
+}
+
+.card{
+    margin-left: 28%;
+    margin-right: 10%;
+}
+.card-body{
+    text-align: center;
+}
+.card-body h5{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+

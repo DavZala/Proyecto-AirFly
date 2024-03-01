@@ -1,0 +1,38 @@
+<div class="contenido">
+  <div class="img-volver">
+    <h4 class="part-1">Creacion Nuevo Paquete Promocional</h4>
+    <img src="../../../assets/img/volver.png" alt="" width="32px" (click)="cambiarContenido('TablaPaquetes')">
+  </div>
+    <div class="text-input">
+      <div class="form">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">ID:</span>
+          <input type="text" class="form-control" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Paquete:</span>
+          <input type="text" class="form-control" placeholder="Nombre del Paquete Promocional" aria-label="Nombre del Paquete Promocional" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Costo: $</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-text">.00</span>
+        </div>
+        <div class="mb-3">
+          <label for="basic-url" class="form-label">URL</label>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon3">Referencia Assets:</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+          </div>
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Descripcion del Paquete:</span>
+        <textarea class="form-control" aria-label="Descripcion"></textarea>
+      </div>
+      <div class="boton-anadir">
+        <button type="button" class="btn btn-outline-warning">Añadir Paquete</button>
+        <button type="button" class="btn btn-outline-danger">Guardar Cambios</button>
+        <button type="button" class="btn btn-outline-info">Cancelar</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.contenido h4{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}
+.boton-anadir{
+    margin-top: 6%;
+    margin-left: 12%;
+}
+
+.contenido table{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 70%;
+}

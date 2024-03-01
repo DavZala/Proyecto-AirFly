@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <div *ngIf="contenido == ''" class="contenido">
+        <h4>Gestión de Paquetes Promocionales</h4>
+        <div class="boton-anadir">
+            <button (click)="cambiarContenido('nuevoPaquete')" type="button" class="btn btn-success">Añadir Paquete Promocional</button>
+        </div>
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Costo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let paquetesExistentes of paquetesExistentes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
+                <td>{{ paquetesExistentes.id }}</td>
+                <td>{{ paquetesExistentes.nombre }}</td>
+                <td>{{ paquetesExistentes.descripcion }}</td>
+                <td>{{ paquetesExistentes.costo }}</td>
+                <td>Editar | Eliminar</td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator [pageSizeOptions]="[4, 8, 12]" (page)="handlePageChange($event)"></mat-paginator>
+    </div>
+    <div *ngIf="contenido == 'nuevoPaquete'" class="contenido-2">
+      <app-crud-paquetes></app-crud-paquetes>
+    </div>
+</div>
