@@ -1,8 +1,27 @@
 .container-fluid{
-    background-color: white;
+   margin: 0;
+   max-height: 80px;
+   background-color: white;
 }
-.nav-search{
-    margin-right: 100px;
-    margin-left: 400px;
-    width: 100%;
+.btn-nav{
+    margin-right: 3%;
+    width: 15%;
+}
+.nav-item{
+    position: relative;
+    left: -18%;
+}
+.btn-nav img{
+    position: relative;
+    left: 15%;
+}
+.img-admin{
+    position: relative;
+    margin-left: 12%;
+}
+.img-admin:hover{
+    transform: scale(1.25);
+}
+.btn-nav img:hover{
+    transform: scale(1.25);
 }

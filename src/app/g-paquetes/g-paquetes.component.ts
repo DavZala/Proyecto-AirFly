@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Paquete } from './Ipaquete';
+import { Component, OnInit } from '@angular/core';
+import { Paquete, listaPaquetes } from './Ipaquete';
+import { ActivatedRoute} from '@angular/router';
 import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -13,14 +14,32 @@ import { CrudPaquetesComponent } from "./crud-paquetes/crud-paquetes.component";
     styleUrl: './g-paquetes.component.css',
     imports: [NgFor, MatTableModule, MatPaginatorModule, MatPaginator, SlicePipe, NgIf, CrudPaquetesComponent]
 })
-export class GPaquetesComponent {
+export class GPaquetesComponent implements OnInit{
+
+    constructor(private _route:ActivatedRoute){}
+
+    paquete?: Paquete;
+    listaPaquetes: Paquete[] = listaPaquetes;
+    ngOnInit():void{
+        this._route.params.subscribe(params => {
+            this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
+        });
+    }
   currentPage = 1;
   pageSize = 4;
-
+  
+  /*
   paquetesExistentes: Paquete[] = [
     {
-      id: 1,
+      id: 0,
       nombre: "Relax en el Caribe",
+      referencia: "",
+      descripcion: " Descubre las paradisíacas playas de Cancún y Riviera Maya, donde podrás relajarte en un hotel frente al mar y disfrutar de actividades como snorkel y buceo. Experimenta la calidez y la hospitalidad de México en una aventura inolvidable. ¡Reserva ahora y déjate cautivar por el encanto único de este destino!",
+      costo: 1800
+    },
+    {
+      id: 1,
+      nombre: "Entradas a Parques Temáticos Disney Orlando",
       referencia: "",
       descripcion: "Disfruta de playas paradisíacas, aguas cristalinas y atardeceres de ensueño en este paquete de relax en el Caribe. Hospédate en un hotel all inclusive frente al mar y disfruta de actividades como snorkel, buceo y paseos en catamarán.",
       costo: 1800
@@ -138,7 +157,7 @@ export class GPaquetesComponent {
       costo: 3500
     },
   ];
-
+*/
   handlePageChange(event: any) {
     this.currentPage = Math.floor(event.pageIndex / event.pageSize) + 1;
     this.pageSize = event.pageSize;

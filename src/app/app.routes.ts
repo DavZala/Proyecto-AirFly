@@ -11,8 +11,9 @@ import { BarranavegacionComponent } from './barranavegacion/barranavegacion.comp
 export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'login', component: LoginComponent },
-    { path: 'detailsdisney', component: DetailVersion1Component},
+   // { path: 'details', component: DetailVersion1Component},
     { path: 'paquetes', component: PaquetesComponent},
+    { path: 'paquetes/:paqueteId', component: DetailVersion1Component},
     { path: 'paneladministrador', component: PaneladminComponent},
     { path: '**', component: PageNotFoundComponent },
 ];

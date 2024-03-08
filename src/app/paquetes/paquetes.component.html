@@ -1,27 +1,39 @@
 <app-barranavegacion></app-barranavegacion>
-<body>
-    <div class="container">
+    <div class="contenedor">
+      <div class="text-encabezado">
+        <h4>Ahorra con estos paquetes que elegimos para ti</h4>
+      </div>
+      <div class="contenido">
         <div class="sidebar">
-            ...
-        </div>
-        <div class="seccion">
-            <li *ngFor="let paquetes of paquetes">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="{{paquetes.referencia_img}}" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">{{paquetes.nombre}}</h5>
-                          <p class="card-text">{{paquetes.descripcion}}</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
+          <div class="text-informativo">
+            <h4>Paquetes Turisticos</h4>
+            <div class="btn-informativo">
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Vuelo</button>
+                <button type="button" class="btn btn-warning">Alojamiento</button>
+                <button type="button" class="btn btn-success">Transporte</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="seccion">
+          <li *ngFor="let listaPaquetes of listaPaquetes">
+              <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{listaPaquetes.ref_1}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body" [routerLink]="['/paquetes', listaPaquetes.id]">
+                        <h5 class="card-title">{{listaPaquetes.nombre}}</h5>
+                        <p class="card-text">{{listaPaquetes.descripcion_1}}</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
                   </div>
-            </li>
-        </div>
+                </div>
+          </li>
+      </div>
+      </div>
     </div>
-</body>
 <app-footer></app-footer>

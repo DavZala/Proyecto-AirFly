@@ -1,0 +1,27 @@
+<div class="contenedor">
+    <div class="contenido">
+        <h4>Gestión de Usuarios</h4>
+        <table>
+            <thead>
+              <tr>
+                <th>Identificacion</th>
+                <th>Nombre</th>
+                <th>Pais</th>
+                <th>Divisa</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let usuariosExistentes of usuariosExistentes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
+                <td>{{ usuariosExistentes.identificacion }}</td>
+                <td>{{ usuariosExistentes.nombre }}</td>
+                <td>{{ usuariosExistentes.pais }}</td>
+                <td>{{ usuariosExistentes.divisa }}</td>
+                <td>Editar | Eliminar</td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator [pageSizeOptions]="[4, 8, 12]" (page)="handlePageChange($event)"></mat-paginator>
+    </div>
+</div>
+

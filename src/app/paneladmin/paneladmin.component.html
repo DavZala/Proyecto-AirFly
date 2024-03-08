@@ -6,7 +6,7 @@
                 <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" (click)="cambiarContenido('administrador')">Administrador</button>
                     <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" (click)="cambiarContenido('paquetes')">Gestion Paquetes</button>
-                    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Gestion Usuarios</button>
+                    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" (click)="cambiarContenido('users')">Gestion Usuarios</button>
                     <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" disabled>Gestion Vuelos</button>
                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false" disabled>Configuraciones</button>
                 </div>
@@ -21,12 +21,15 @@
         </div>
     </div>
     <div class="panel" *ngIf="contenido === 'administrador'">
-        <app-login></app-login>
+        <app-bienvenida></app-bienvenida>
     </div>
     <div class="panel2" *ngIf="contenido === 'paquetes'">
         <app-g-paquetes></app-g-paquetes>
     </div>
-    <div class="panel3" *ngIf="contenido === 'home'">
+    <div class="panel3" *ngIf="contenido === 'users'">
+        <app-g-users></app-g-users>
+    </div>
+    <div class="panel4" *ngIf="contenido === 'home'">
         <app-home></app-home>
     </div>
 </div>

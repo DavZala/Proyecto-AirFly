@@ -1,82 +1,63 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../../assets/img/Icon AirFLy.png" alt="logo" width="90px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Descubrir</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Planea tu Viaje
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Informacion y Ayuda</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <a routerLink="login">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-              <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-            </svg>
-          </a>
-          <i class="bi bi-box-arrow-in-right"></i>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <body>
+<app-barranavegacion></app-barranavegacion>
     <div class="seccion-1">
         <div class="imgs">
             <div class="imgs-1">
-              <img src="#" alt="">
-              ...
+              <img src="{{paquete?.ref_1}}" alt="" width="100%" height="100%">
             </div>
             <div class="imgs-2">
-              <img src="#" alt="">
-              ...
+              <div class="img-2-arriba">
+                <img src="{{paquete?.ref_2}}" alt="" width="100%" height="100%">
+              </div>
+              <div class="img-2-abajo">
+                <div class="derecha">
+                  <img src="{{paquete?.ref_3}}" alt="" width="100%" height="100%">
+                </div>
+                <div class="izquierda">
+                  <img src="{{paquete?.ref_4}}" alt="" width="100%" height="100%">
+                </div>
+              </div>
             </div>
-            <div class="imgs-3">
-              <img src="" alt="">
-              ...
+        </div>
+        <div class="informacion-paquete">
+          <div class="text-info">
+            <div class="encabezado">
+              <img src="../../assets/img/icons8-selection-64.png" alt="" width="64
+              px">
+              <h4>{{paquete?.nombre}}</h4>
             </div>
-            <div class="imgs-4">
-              <img src="" alt="">
-              ...
+            <div class="estrellas">
+             <img *ngFor="let estrellas of paquete?.estrellas" src="../../assets/img/estrella.png" alt="" width="28px">
             </div>
+            <div class="info-ubicacion">
+              <p>{{paquete?.descripcion_ubicacion}}</p>
+            </div>
+          </div>
+          <div class="sec-btn-info">
+            
+          </div>
         </div>
     </div>
     <div class="seccion-2">
         <div class="tarjeta-1-sec-2">
           <div class="title">
-            <h4>¡Vive La Magia de Disney!</h4>
+            <h4>¡Vive La Magia de {{paquete?.pais}}!</h4>
           </div>
           <div class="text">
-            <p>{{text_descrip}}</p>
+          <p>{{paquete?.descripcion_2}}</p>
+          <!--<p>Prepárate para divertirte en atracciones con mucha música, fuegos artificiales destellantes y toda la magia de este mundo donde reina la fantasía.¡Vas a poder abrazar a Mickey, Minnie y otros personajes queridos!Descubre los parques <br><br>• En Magic Kingdom podrás disfrutar de las atracciones clásicas de Disney, destellantes fuegos artificiales, espectáculos musicales y de la compañía de los personajes más queridos de Disney World. <br><br>• En Epcot, descubrirás las culturas del mundo en sus increíbles pabellones internacionales, te divertirás en sus emocionantes atracciones y vivirás un día diferente junto a la mejor tecnología. <br><br>•En Disney’s Hollywood Studios, conocerás un poco más sobre las películas y series de TV de Disney y disfrutarás de increíbles espectáculos. <br><br>•Ya en Disney’s Animal Kingdom, podrás conocer a los animales de distintos lugares del mundo en áreas como Asia y Africa, además de disfrutar del mundo submarino y del prehistórico.</p>-->
           </div>
+          <!---
           <div class="info-img">
             <img src="../../assets/img/logo_disney.png" alt="">
             <img src="../../assets/img/logo_disney2.png" alt="">
             <img src="../../assets/img/disney3.webp" alt="">
           </div>
+        -->
         </div>
     </div>
     <div class="seccion-3">
-      ...
+      <div class="tarjeta-1-sec-3">
+
+      </div>
     </div>
-  </body>
   <app-footer></app-footer>

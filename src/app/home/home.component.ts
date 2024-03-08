@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
 import { BarranavegacionComponent } from "../barranavegacion/barranavegacion.component";
+import { Paquete, listaPaquetes } from '../g-paquetes/Ipaquete';
 
 @Component({
     selector: 'app-home',
@@ -14,11 +15,21 @@ import { BarranavegacionComponent } from "../barranavegacion/barranavegacion.com
         BarranavegacionComponent
     ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+    constructor(private _route:ActivatedRoute){}
+
+    paquete?: Paquete;
+    listaPaquetes: Paquete[] = listaPaquetes;
+    ngOnInit():void{
+        this._route.params.subscribe(params => {
+            this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
+        });
+    }
 
 PaisDestino: String = "Florida, Estados Unidos";
 Destino: String = "Parques Disney";
-acceso: string = "login"
+urlDestino: String = "/paquetes/0"
 imglink: string = "../../assets/img/disney.jpeg"; //omrah.jpg
 
 }

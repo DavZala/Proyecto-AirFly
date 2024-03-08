@@ -6,7 +6,7 @@
     width: 82%;
     height: 100%;
     position: absolute;
-    background-image: url(../../assets/img/Avion-seccion-1-page.jpg);
+    background-image: url(../../assets/img/avion_seccion.jpg);
     filter: brightness(90%)
 }
 
@@ -47,9 +47,9 @@
     font-size: large;
 }
 .informacion-areopuertos .p1{
-    color: red;
+    color: rgb(10, 85, 193, 1);
     font-size: medium;
-    font-weight: 200;
+    font-weight: 500;
 }
 .text-info p{
     color: black;
@@ -58,7 +58,7 @@
 }
 
 .seccion-2{
-    height: 850px;
+    height: 810px;
     position: relative;
 }
 .tarjeta-2{
@@ -187,8 +187,12 @@
 }
 .selec-aeropuerto{
     height: 100%;
-    background-color: black;
+}
+.busqueda-aeropuerto{
+    margin-top: 5%;
 }
 .buttom-search{
+    margin-top: 17%;
+    margin-left: 25%;
     height: 20%;
 }

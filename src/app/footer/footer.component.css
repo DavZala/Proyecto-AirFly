@@ -1,26 +1,74 @@
-footer{
-  height: 350px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(110, 163, 253, 0.4);
-  background-image: url(../../assets/img/image.png);
+.contenedor-footer{
+  display: flex;
+  border-top: solid 1px rgb(91, 172, 245, 1);
 }
 .informacion-footer{
-  position: absolute;
-  width: 40%;
-  height: 75%;
-  left: 12%;
-  top: 18%;
+  width: 60%;
+  height: 180px;
+  background-color: white
 }
 .informacion-footer h4{
-  color: white;
+  color: black;
+  position: relative;
+  top: 11%;
+  margin-left: 11%;
   font-weight: 500;
   font-size: x-large;
 }
-.informacion-footer {
-  color: white;
+.informacion-footer p{
+  color: black;
+  position: relative;
+  top: 11%;
+  margin-left: 11%;
+  width: 70%;
   font-weight: 100;
   font-size: medium;
+}
+.labels{
+  color: black;
+  font-weight: 500;
+}
+.input-email{
+  margin-top: 14%;
+}
+.input-email input{
+  margin-left: 3%;
+  width: 60%;
+}
+.input-check{
+  margin-top: 5%;
+}
+.input-check label{
+  margin-left: 3%;
+}
+
+.inputs-contacto{
+  margin-left: 12%;
+  width: 30%;
+}
+.sec-2-footer{
+  width: 40%;
+  max-height: 180px;
+  border-right: solid 1px rgb(91, 172, 245, 1);
+}
+.sec-2-footer p{
+  position: relative;
+  top: 106px;
+  left: 33%;
+}
+.sec-2-footer p:hover{
+  font-weight: bold;
+}
+.redes-sociales{
+  display: inline-flex;
+  margin-left: 30%;
+  gap: 15px;
+}
+.redes-sociales img:hover{
+  transform: scale(1.25);
+}
+.logo-footer{
+  position: relative;
+  width: 20%;
+  height: 20%;
 }

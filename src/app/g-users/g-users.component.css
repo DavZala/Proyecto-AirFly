@@ -1,0 +1,15 @@
+.contenido h4{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: plum;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.contenido table{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 70%;
+}

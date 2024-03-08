@@ -1,0 +1,39 @@
+.contenido{
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.text-encabezado .part-1{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0d6efd;
+    font-weight: bold;
+    font-size: x-large;
+}
+.text-encabezado .part-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-weight: bold;
+    font-size: x-large;
+}
+.text-encabezado-p{
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: black;
+    font-size: medium;
+}
+.img-admin{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-encabezado .part-2:hover{
+    transform: scale(1.25);
+}

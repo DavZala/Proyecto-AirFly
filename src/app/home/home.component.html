@@ -27,18 +27,31 @@
           <div class="tarjeta-secc-1-2">
             <div class="text-info">
               <div class="informacion-areopuertos">
-                  <p class="p1 ">Aeropuerto de Salida</p>
+                  <p class="p1">Aeropuerto de Salida</p>
                   <h4>Bogotá(BGT)</h4>
                   <p>Aeropuerto el Dorado</p>
               </div>
               <div class="selec-aeropuerto">
-                <img src="../../assets/img/person.svg" alt="">
                 <select class="form-select form-select-sm" aria-label="Small select example">
                   <option selected>Pasajeros</option>
                   <option value="1">Uno</option>
                   <option value="2">Dos</option>
                   <option value="3">Mas de Tres</option>
                 </select>
+                <div class="busqueda-aeropuerto">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><img src="../../assets/img/icons8-avión-96.png" alt="" width="16px"></span>
+                    <input type="text" class="form-control" placeholder="Aeropuerto" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="selec-paquete">
+                  <select class="form-select form-select-sm" aria-label="Small select example">
+                  <option selected>Vuelo</option>
+                  <option value="1">Paquete Turistico</option>
+                  <option value="2">Vuelo + Alojamiento</option>
+                  <option value="3">Vuelo + Transporte</option>
+                </select>
+                </div>
                 <div class="buttom-search">
                   <button type="button" class="btn btn-primary">Buscar Ticket</button>
                 </div>
@@ -56,10 +69,10 @@
       <div class="tarjeta-2">
         <div class="tarjeta-secc-2-part-1">
           <div class="text-offert">
-            <h4>Oferta Espepcial!</h4>
+            <h4>Oferta Especial!</h4>
             <div class="card" style="width: 100%; height: 90%;">
               <img src="{{imglink}}" class="card-img-top" alt="...">
-              <div class="card-body">
+              <div class="card-body" routerLink="/{{urlDestino}}">
                 <p class="card-text">{{PaisDestino}}</p>
                 <h4 class="card-text">{{Destino}}</h4>
                 <p class="card-text">Vuelo en clase economica - regreso el 26 Junio 2024<br>desde 1200USD</p>
@@ -74,7 +87,7 @@
                 <img src="../../assets/img/barcelona.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body" [routerLink]="['/paquetes', 1]">
                   <p class="card-text">Emiratos Árabes Unidos.</p>
                   <h4 class="card-title">Dubai</h4>
                   <p class="card-text">Vuelo en clase economica - regreso el 26 Junio 2024 desde 1200USD</p>
@@ -89,7 +102,7 @@
                 <img src="../../assets/img/Cancun.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body" [routerLink]="['/paquetes', 3]">
                   <p class="card-text">México</p>
                   <h4 class="card-title">Cancún</h4>
                   <p class="card-text">Vuelo en clase economica - regreso el 26 Junio 2024 desde 1200USD</p>
@@ -104,7 +117,7 @@
                 <img src="../../assets/img/paris.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body" [routerLink]="['/paquetes', 2]">
                   <p class="card-text">Francia</p>
                   <h4 class="card-title">Paris</h4>
                   <p class="card-text">Vuelo en clase economica - regreso el 26 Junio 2024 desde 1200USD</p>
@@ -118,16 +131,3 @@
     </div>
   <app-footer></app-footer>
   
- <!-- <footer>
-    <div class="informacion-footer">
-        <h4>Nunca pierdas una oferta!</h4>
-        <p>Subscribete para recibir antes que nadie sobre nuestra promociones</p>
-        <div class="inputs-contacto">
-          <label for="Email">Email:</label><input type="text" name="Email">
-          <input type="checkbox" name="tyc" id="">
-          <label for=""tyc>Terminos y Condiciones</label>
-        </div>
-        <button type="button" class="btn btn-outline-info">Enviar</button>
-    </div>
-  </footer> 
--->

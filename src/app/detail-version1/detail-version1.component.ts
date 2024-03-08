@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
+import { BarranavegacionComponent } from "../barranavegacion/barranavegacion.component";
+import { NgFor } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Paquete, listaPaquetes } from '../g-paquetes/Ipaquete';
 
 @Component({
     selector: 'app-detail-version1',
@@ -8,10 +11,38 @@ import { FooterComponent } from "../footer/footer.component";
     templateUrl: './detail-version1.component.html',
     styleUrl: './detail-version1.component.css',
     imports: [
-        FooterComponent
+        FooterComponent,
+        BarranavegacionComponent,
+        NgFor
     ]
 })
-export class DetailVersion1Component {
+export class DetailVersion1Component implements OnInit {
+
+    constructor(private _route:ActivatedRoute){}
+
+    paquete?: Paquete;
+    //estrellas?: number[] = this.paquete?.estrellas;
+    
+    listaPaquetes: Paquete[] = listaPaquetes;
+
+
+    ngOnInit():void{
+        this._route.params.subscribe(params => {
+            this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
+        });
+    }
+
+/*
+opcion: number[] = [1,1,1,1,1];
+nombre_paquete: String = "Entradas a Parques Temáticos Disney Orlando";
+ref_1: String = "../../assets/img/disney2.avif";
+ref_2: String = "../../assets/img/disney-1.jpeg";
+ref_3: String = "../../assets/img/disney.jpeg";
+ref_4: String = "../../assets/img/disney-2.jpg";
+descripcion_ubicacion: String = "Orlando, Florida, Estados Unidos a 25 minutos del centro.";
+
+referencia_img_1: String = "../../assets/img/disney.jpeg";
 
 text_descrip: String = "Prepárate para divertirte en atracciones con mucha música, fuegos artificiales destellantes y toda la magia de este mundo donde reina la fantasía.¡Vas a poder abrazar a Mickey, Minnie y otros personajes queridos!Descubre los parques <br><br>• En Magic Kingdom podrás disfrutar de las atracciones clásicas de Disney, destellantes fuegos artificiales, espectáculos musicales y de la compañía de los personajes más queridos de Disney World. <br><br>• En Epcot, descubrirás las culturas del mundo en sus increíbles pabellones internacionales, te divertirás en sus emocionantes atracciones y vivirás un día diferente junto a la mejor tecnología. <br><br>•En Disney’s Hollywood Studios, conocerás un poco más sobre las películas y series de TV de Disney y disfrutarás de increíbles espectáculos. <br><br>•Ya en Disney’s Animal Kingdom, podrás conocer a los animales de distintos lugares del mundo en áreas como Asia y Africa, además de disfrutar del mundo submarino y del prehistórico.";
+*/
 }

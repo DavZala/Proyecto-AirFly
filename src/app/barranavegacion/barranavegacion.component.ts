@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './barranavegacion.component.css'
 })
 export class BarranavegacionComponent {
-
+  referencia_img: String = "../../assets/img/icons8-piloto-automático-64.png"; // ../../assets/img/icons8-piloto-automático-64-blanco.png
 }

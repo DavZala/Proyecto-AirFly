@@ -15,13 +15,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let paquetesExistentes of paquetesExistentes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
-                <td>{{ paquetesExistentes.id }}</td>
-                <td>{{ paquetesExistentes.nombre }}</td>
-                <td>{{ paquetesExistentes.descripcion }}</td>
-                <td>{{ paquetesExistentes.costo }}</td>
+              
+              <tr *ngFor="let listaPaquetes of listaPaquetes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
+                <td>{{ listaPaquetes.id }}</td>
+                <td>{{ listaPaquetes.nombre }}</td>
+                <td>{{ listaPaquetes.descripcion_1 }}</td>
+                <td>{{ listaPaquetes.costo }}</td>
                 <td>Editar | Eliminar</td>
               </tr>
+              
             </tbody>
           </table>
           <mat-paginator [pageSizeOptions]="[4, 8, 12]" (page)="handlePageChange($event)"></mat-paginator>

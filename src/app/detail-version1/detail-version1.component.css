@@ -1,51 +1,105 @@
 .seccion-1{
     height: 600px;
-    background-color: red;
 }
 .seccion-2{
     height: 680px;
 }
-.seccion-3{
-    height: 800px;
-    background-color: orange;
-}
-
-.imgs{
-    width: 80%;
-    height: 80%;
-    background-color: black;
-}
-/*
-.imgs{
-    width: 100%;
-    display: grid;
-    border: solid, black, 3px ;
-    grid-template-areas: "1 2 2"
-                         "1 3 4";
-    grid-gap: 10px;
-}
-.imgs .imgs-1{
-    height: 100%;
-    background-color: yellow;
-}
-.imgs .imgs-2{
-    background-color: green;
-}
-.imgs .imgs-3{
-    background-color: blue;
-}
-.imgs .imgs-4{
-    background-color: olive;
-}
-*/
 .seccion-2{
     position: relative;
 }
+.seccion-3{
+    height: 800px;
+}
+
+.imgs{
+    position: relative;
+    top: 38px;
+    width: 90%;
+    height: 82%;
+    display: flex;
+    margin-left: 5%;
+}
+.imgs img:hover{
+    cursor: pointer;
+}
+.imgs .imgs-1{
+    height: 100%;
+    width: 60%;
+    padding: 3px;
+}
+.imgs .imgs-2{
+    width: 40%;
+}
+.img-2-arriba{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100%;
+    height: 55%;
+}
+.img-2-abajo{
+    height: 45%;
+    width: 100%;
+    padding-bottom: 3px;
+    display: flex;
+}
+.derecha{
+    width: 50%;
+    padding-right: 3px;
+}
+.izquierda{
+    width: 50%;
+}
+
+.informacion-paquete{
+    margin-top: 7%;
+    height: 130px;
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+}
+
+.text-info{
+    width: 55%;
+}
+.encabezado h4{
+    font-weight: 400;
+    font-size: x-large;
+}
+.encabezado{
+    margin-left: 6%;
+    gap: 8px;
+    display: flex;
+    color: black;
+}
+.sec-btn-info{
+    left: 8%;
+    border-radius: 30px;
+    position: relative;
+    top: -90px;
+    width: 35%;
+    background-color: white;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.estrellas{
+    position: relative;
+    top: -30px;
+    margin-left: 20%;
+}
+.estrellas p{
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+.info-ubicacion{
+    margin-left: 20%;
+    color: black;
+}
+
 
 .tarjeta-1-sec-2{
-    top: 5%;
+    border-top: solid 1px rgb(91, 172, 245, 1);
+    margin-top: 12%;
     left: 5%;
-    /*background-color: violet;¨*/
     width: 90%;
     height: 90%;
     position: relative;
@@ -55,7 +109,9 @@
     display: flex;
 }
 .tarjeta-1-sec-2 h4{
+    position: relative;
     color: black;
+    margin-top: 5%;
     font-weight: bold;
     font-size: x-large;
 }   
@@ -63,10 +119,9 @@
     top: 8%;
     line-height: 25px;
     position: relative;
-    font-size: large;
+    font-size: medium;
     width: 70%;
     left: 8%;
-   /* background-color: royalblue;*/
 }
 
 .info-img img{
@@ -74,4 +129,13 @@
     margin-right: 8%;
     margin-top: 8%;
     width: 16%;
+}
+
+.tarjeta-1-sec-3{
+    border-top: solid 1px rgb(91, 172, 245, 1);
+    margin-top: 9%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    position: relative;
 }

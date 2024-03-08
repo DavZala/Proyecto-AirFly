@@ -4,13 +4,15 @@ import { GPaquetesComponent } from '../g-paquetes/g-paquetes.component';
 import { NgIf } from '@angular/common';
 import { LoginComponent } from "../login/login.component";
 import { HomeComponent } from "../home/home.component";
+import { GUsersComponent } from "../g-users/g-users.component";
+import { BienvenidaComponent } from "./bienvenida/bienvenida.component";
 
 @Component({
     selector: 'app-paneladmin',
     standalone: true,
     templateUrl: './paneladmin.component.html',
     styleUrl: './paneladmin.component.css',
-    imports: [BarranavegacionComponent, GPaquetesComponent, NgIf, LoginComponent, HomeComponent]
+    imports: [BarranavegacionComponent, GPaquetesComponent, NgIf, LoginComponent, HomeComponent, GUsersComponent, BienvenidaComponent]
 })
 export class PaneladminComponent {
   contenido: string = "administrador";
