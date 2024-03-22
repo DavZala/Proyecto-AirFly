@@ -1,9 +1,9 @@
 <div class="contenedor">
     <div class="contenido">
         <h4>Gestión de Usuarios</h4>
-        <table>
+        <table class="table table-striped">
             <thead>
-              <tr>
+              <tr class="table-primary">
                 <th>Identificacion</th>
                 <th>Nombre</th>
                 <th>Pais</th>
@@ -17,7 +17,10 @@
                 <td>{{ usuariosExistentes.nombre }}</td>
                 <td>{{ usuariosExistentes.pais }}</td>
                 <td>{{ usuariosExistentes.divisa }}</td>
-                <td>Editar | Eliminar</td>
+                <td>
+                  <button type="button" class="btn btn-warning btn-sm m-2" title="Editar"><i class="bi bi-pen"></i></button>
+                  <button type="button" class="btn btn-danger btn-sm m-2" title="Eliminar"><i class="bi bi-trash3"></i></button>
+                </td>
               </tr>
             </tbody>
           </table>

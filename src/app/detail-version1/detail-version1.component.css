@@ -76,6 +76,7 @@
     border-radius: 30px;
     position: relative;
     top: -90px;
+    height: 160px;
     width: 35%;
     background-color: white;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
@@ -93,6 +94,21 @@
 .info-ubicacion{
     margin-left: 20%;
     color: black;
+}
+
+.text-encabezado{
+    text-align: center;
+    width: 60%;
+    margin-top: 4%;
+    margin-left: 18%;
+}
+.text-encabezado h4{
+    color: black;
+    font-weight: 500;
+}
+.btn-pago{
+    width: 60%;
+    margin-left: 38%;
 }
 
 
@@ -139,3 +155,4 @@
     height: 90%;
     position: relative;
 }
+

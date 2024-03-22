@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Paquete, listaPaquetes } from './Ipaquete';
+import { Paquete, listaPaquetes} from '../Models/Ipaquete';
 import { ActivatedRoute} from '@angular/router';
 import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
@@ -20,14 +20,14 @@ export class GPaquetesComponent implements OnInit{
 
     paquete?: Paquete;
     listaPaquetes: Paquete[] = listaPaquetes;
+
     ngOnInit():void{
         this._route.params.subscribe(params => {
             this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
-        });
-    }
+          });
+        }
   currentPage = 1;
   pageSize = 4;
-  
   /*
   paquetesExistentes: Paquete[] = [
     {

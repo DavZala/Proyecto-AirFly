@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Usuario } from './IUsuario';
+import { Usuario } from '../Models/Iusuario';
 import { MatTableModule } from '@angular/material/table';
 import { NgFor, SlicePipe } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';

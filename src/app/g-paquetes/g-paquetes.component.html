@@ -4,7 +4,7 @@
         <div class="boton-anadir">
             <button (click)="cambiarContenido('nuevoPaquete')" type="button" class="btn btn-success">Añadir Paquete Promocional</button>
         </div>
-        <table>
+        <table class="table table-striped">
             <thead>
               <tr>
                 <th>ID</th>
@@ -14,14 +14,16 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              
+            <tbody>            
               <tr *ngFor="let listaPaquetes of listaPaquetes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
                 <td>{{ listaPaquetes.id }}</td>
                 <td>{{ listaPaquetes.nombre }}</td>
                 <td>{{ listaPaquetes.descripcion_1 }}</td>
                 <td>{{ listaPaquetes.costo }}</td>
-                <td>Editar | Eliminar</td>
+                <td>
+                  <button type="button" class="btn btn-warning btn-sm m-2" title="Editar"><i class="bi bi-pen"></i></button>
+                  <button type="button" class="btn btn-danger btn-sm m-2" title="Eliminar"><i class="bi bi-trash3"></i></button>
+                </td>
               </tr>
               
             </tbody>

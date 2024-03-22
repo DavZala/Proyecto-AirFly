@@ -6,6 +6,7 @@ import { LoginComponent } from "../login/login.component";
 import { HomeComponent } from "../home/home.component";
 import { GUsersComponent } from "../g-users/g-users.component";
 import { BienvenidaComponent } from "./bienvenida/bienvenida.component";
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-paneladmin',

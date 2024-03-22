@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { BarranavegacionComponent } from "../barranavegacion/barranavegacion.component";
 import { NgFor } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
-import { Paquete, listaPaquetes } from '../g-paquetes/Ipaquete';
+import { Paquete} from '../Models/Ipaquete';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { MyApiService } from '../Services/my-api.service';
 
 @Component({
     selector: 'app-paquetes',
@@ -14,16 +16,22 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 })
 export class PaquetesComponent implements OnInit{
 
-  constructor(private _route:ActivatedRoute){}
+  constructor(private _route:ActivatedRoute, private _apiService:MyApiService){}
 
   paquete?: Paquete;
-  listaPaquetes: Paquete[] = listaPaquetes;
+  listaPaquetes: Paquete[] = [];
   ngOnInit():void{
-      this._route.params.subscribe(params => {
+    this._apiService.obtenerProductos().subscribe((data:Paquete[]) => {
+      console.log(data);
+      this.listaPaquetes = data;
+    });
+    /*  
+    this._route.params.subscribe(params => {
           this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
       });
+    */
   }
-    
+}
 
   /*
     paquetes: any[] = [
@@ -83,4 +91,3 @@ export class PaquetesComponent implements OnInit{
       },
       ];
 */
-}

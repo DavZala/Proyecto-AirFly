@@ -25,15 +25,23 @@
               px">
               <h4>{{paquete?.nombre}}</h4>
             </div>
+            
             <div class="estrellas">
-             <img *ngFor="let estrellas of paquete?.estrellas" src="../../assets/img/estrella.png" alt="" width="28px">
+             <img *ngFor="let estrellas of estrellas" src="../../assets/img/estrella.png" alt="" width="28px">
             </div>
+            
             <div class="info-ubicacion">
               <p>{{paquete?.descripcion_ubicacion}}</p>
             </div>
           </div>
           <div class="sec-btn-info">
-            
+            <div class="text-encabezado">
+              <h4>Paquete tutistico {{paquete?.nombre}}</h4>
+              <p>Precio USD$: {{paquete?.costo}}</p>
+            </div>
+            <div class="btn-pago">
+              <button type="button" class="btn btn-success">Comprar</button>
+            </div>
           </div>
         </div>
     </div>

@@ -6,14 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { DetailVersion1Component } from './detail-version1/detail-version1.component';
 import { PaquetesComponent } from './paquetes/paquetes.component';
 import { PaneladminComponent } from './paneladmin/paneladmin.component';
-import { BarranavegacionComponent } from './barranavegacion/barranavegacion.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'login', component: LoginComponent },
    // { path: 'details', component: DetailVersion1Component},
     { path: 'paquetes', component: PaquetesComponent},
-    { path: 'paquetes/:paqueteId', component: DetailVersion1Component},
+    { path: 'paquete/:paqueteId', component: DetailVersion1Component,},
     { path: 'paneladministrador', component: PaneladminComponent},
     { path: '**', component: PageNotFoundComponent },
+    
 ];

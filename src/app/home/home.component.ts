@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
 import { BarranavegacionComponent } from "../barranavegacion/barranavegacion.component";
-import { Paquete, listaPaquetes } from '../g-paquetes/Ipaquete';
+import { Paquete } from '../Models/Ipaquete';
 
 @Component({
     selector: 'app-home',
@@ -15,10 +15,11 @@ import { Paquete, listaPaquetes } from '../g-paquetes/Ipaquete';
         BarranavegacionComponent
     ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent{
 
     constructor(private _route:ActivatedRoute){}
 
+    /*
     paquete?: Paquete;
     listaPaquetes: Paquete[] = listaPaquetes;
     ngOnInit():void{
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
             this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
         });
     }
+    */
 
 PaisDestino: String = "Florida, Estados Unidos";
 Destino: String = "Parques Disney";
