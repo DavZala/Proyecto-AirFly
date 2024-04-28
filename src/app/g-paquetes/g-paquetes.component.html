@@ -7,7 +7,7 @@
         <table class="table table-striped">
             <thead>
               <tr>
-                <th>ID</th>
+            <!---    <th>ID</th> -->
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Costo</th>
@@ -16,13 +16,13 @@
             </thead>
             <tbody>            
               <tr *ngFor="let listaPaquetes of listaPaquetes |slice: (currentPage - 1) * pageSize : currentPage * pageSize">
-                <td>{{ listaPaquetes.id }}</td>
+             <!---   <td>{{ listaPaquetes.id }}</td> -->
                 <td>{{ listaPaquetes.nombre }}</td>
                 <td>{{ listaPaquetes.descripcion_1 }}</td>
                 <td>{{ listaPaquetes.costo }}</td>
                 <td>
-                  <button type="button" class="btn btn-warning btn-sm m-2" title="Editar"><i class="bi bi-pen"></i></button>
-                  <button type="button" class="btn btn-danger btn-sm m-2" title="Eliminar"><i class="bi bi-trash3"></i></button>
+                  <button [routerLink]="['/paneladministrador', listaPaquetes.id]" type="button" class="btn btn-warning btn-sm m-2" title="Editar"><i class="bi bi-pen"></i></button>
+                  <button (click)="eliminarPaquete(listaPaquetes.id, listaPaquetes.nombre)" type="button" class="btn btn-danger btn-sm m-2" title="Eliminar"><i class="bi bi-trash3"></i></button>
                 </td>
               </tr>
               

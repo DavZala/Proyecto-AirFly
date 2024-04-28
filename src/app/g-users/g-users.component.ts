@@ -19,57 +19,48 @@ export class GUsersComponent {
   usuariosExistentes: Usuario[] = [
     {
       identificacion: 1,
-      nombre: "Juan",
-      pais: "Colombia",
-      divisa: 1800
+      email: "Juan",
+      password: ""
     },
     {
       identificacion: 2,
-      nombre: "María",
-      pais: "México",
-      divisa: 2100
+      email: "María",
+      password: ""
     },
     {
       identificacion: 3,
-      nombre: "Pedro",
-      pais: "España",
-      divisa: 1500
+      email: "Pedro",
+      password: ""
     },
     {
       identificacion: 4,
-      nombre: "Ana",
-      pais: "Argentina",
-      divisa: 1900
+      email: "Ana",
+      password: ""
     },
     {
       identificacion: 5,
-      nombre: "Luis",
-      pais: "Chile",
-      divisa: 2200
+      email: "Luis",
+      password: ""
     },
     {
       identificacion: 6,
-      nombre: "Elena",
-      pais: "Perú",
-      divisa: 2000
+      email: "Elena",
+      password: ""
     },
     {
       identificacion: 7,
-      nombre: "Carlos",
-      pais: "Uruguay",
-      divisa: 1800
+      email: "Carlos",
+      password: ""
     },
     {
       identificacion: 8,
-      nombre: "Sofía",
-      pais: "Brasil",
-      divisa: 2300
+      email: "Sofía",
+      password: ""
     },
     {
       identificacion: 9,
-      nombre: "Diego",
-      pais: "Ecuador",
-      divisa: 1700
+      email: "Diego",
+      password: ""
     }
     
   ];

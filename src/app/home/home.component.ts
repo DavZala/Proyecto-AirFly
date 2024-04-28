@@ -29,9 +29,9 @@ export class HomeComponent{
     }
     */
 
-PaisDestino: String = "Florida, Estados Unidos";
-Destino: String = "Parques Disney";
-urlDestino: String = "/paquetes/0"
-imglink: string = "../../assets/img/disney.jpeg"; //omrah.jpg
+PaisDestino: String = "Omrah, Arabia Saudita";
+Destino: String = "Umrah";
+urlDestino: String = ""
+imglink: string = "../../assets/img/omrah.jpg"; //omrah.jpg disney.jpeg
 
 }

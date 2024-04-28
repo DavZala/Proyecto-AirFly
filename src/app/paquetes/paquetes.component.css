@@ -36,10 +36,11 @@
     max-height: 600px ;
 }
 .seccion{
-    width: 70%;
+    width: 100%;
 }
 li{
     list-style-type: none;
+    margin-left: 8%;
 }
 
 .card{

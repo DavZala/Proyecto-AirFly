@@ -1,31 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { Paquete, listaPaquetes} from '../Models/Ipaquete';
-import { ActivatedRoute} from '@angular/router';
+import { ChangeDetectorRef, Component, ComponentRef, OnInit } from '@angular/core';
+import { Paquete} from '../Models/Ipaquete';
+import { ActivatedRoute, RouterLink} from '@angular/router';
 import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
 import { CrudPaquetesComponent } from "./crud-paquetes/crud-paquetes.component";
+import { MyApiService } from '../Services/my-api.service';
+import Swal from 'sweetalert2';
+import { Router } from 'express';
 
 @Component({
     selector: 'app-g-paquetes',
     standalone: true,
     templateUrl: './g-paquetes.component.html',
     styleUrl: './g-paquetes.component.css',
-    imports: [NgFor, MatTableModule, MatPaginatorModule, MatPaginator, SlicePipe, NgIf, CrudPaquetesComponent]
+    imports: [RouterLink, NgFor, MatTableModule, MatPaginatorModule, MatPaginator, SlicePipe, NgIf, CrudPaquetesComponent]
 })
 export class GPaquetesComponent implements OnInit{
 
-    constructor(private _route:ActivatedRoute){}
+    constructor(private _route:ActivatedRoute, private _apiService:MyApiService, private _changeDetectorRef: ChangeDetectorRef){}
 
     paquete?: Paquete;
-    listaPaquetes: Paquete[] = listaPaquetes;
+    listaPaquetes: Paquete[] = [];
 
+    public eliminarPaquete(id: number | string, nombre: string){
+      Swal.fire({
+        title: "¿Esta seguro que quiere eliminar el paquete?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Eliminar",
+        denyButtonText: `No eliminar`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Paquete Eliminado!", "", "success");
+          this._apiService.eliminarPaquete(id).subscribe((data:Paquete) => {this.paquete = data
+           // alert("Usted elimino el paquete turistico con el nombre: "+nombre)
+          })
+       //   this.router.navigate(['/destino']);
+        } else if (result.isDenied) {
+          //Swal.fire("El paquete no se elimino!", "", "info");
+        }
+      });
+    }
+
+    ngOnInit():void{
+      this._apiService.obtenerProductos().subscribe((data:Paquete[]) => {this.listaPaquetes = data});
+    }
+
+    /*
     ngOnInit():void{
         this._route.params.subscribe(params => {
             this.paquete = this.listaPaquetes.find(paquete => paquete.id == params['paqueteId']);
           });
         }
+        */
   currentPage = 1;
   pageSize = 4;
   /*

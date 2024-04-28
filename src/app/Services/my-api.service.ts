@@ -17,4 +17,15 @@ export class MyApiService {
   public obtenerProducto(id: number | string): Observable<Paquete>{
     return this._httpClient.get<Paquete>(`${this.baseURL}/paquete/${id}`);
   }
+  public nuevoPaquete(paquete: Paquete): Observable<Paquete>{
+    return this._httpClient.post<any>(`${this.baseURL}/paquete`, paquete);
+  }
+  public actualizarPaquete(paquete: Paquete): Observable<Paquete>{
+    return this._httpClient.put<Paquete>(`${this.baseURL}/paquete`, paquete);
+  }
+
+  public eliminarPaquete(id: number | string): Observable<Paquete>{
+    return this._httpClient.delete<Paquete>(`${this.baseURL}/paquete/${id}`)
+  }
+
 }

@@ -43,18 +43,7 @@ export class DetailVersion1Component implements OnInit {
                 next:(data:Paquete) =>{
                     this.paquete = data
                     this.estrellas = String(this.paquete.estrellas).split("").map(Number);
-
-                    //let estrellas1 = numeroToArray(this.paquete.estrellas)
-                    //console.log(this.paquete.estrellas.length)
-                    /*
-                    for (let index = 0; index < this.paquete.estrellas; index++) {
-                        this.estrellas = new Array(this.paquete.estrellas).fill(null);
-                        this.estrellas.push(index);
-                        console.log(index);
-                    }  
-                    */
-                    this.changeDetectorRef.detectChanges(); 
-                  //  console.log(this.estrellas)             
+                    this.changeDetectorRef.detectChanges();           
                 }    
             })
         }
